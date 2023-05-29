@@ -1,0 +1,363 @@
+:root {
+    --clr-gold: hsl(46,70%,49%);
+    --clr-black: hsl(0,0%,0%);
+
+    --ff-title: 'Courier New', Courier, monospace;
+    --ff-header: 'Open Sans', sans-serif;
+    --ff-body: 'Open Sans', sans-serif;
+
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --fs-small: .75rem;
+    --fs-normal: 1rem;
+    --fs-large: 1.25rem;
+    --fs-xlarge: 1.5rem;
+    --fs-xxlarge: 2rem;
+}
+
+/* Global Settings */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+    
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    height: 100svh;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+
+/* Header Settings */
+
+.gold {
+    color: var(--clr-gold);
+}
+
+.bold {
+    font-weight: var(--fw-bold);
+}
+
+#header-top-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 1rem;
+    min-height: 75px;
+    margin-top: 0.5rem;
+}
+
+#header-top-row-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#title {
+    font-family: var(--ff-title);
+    font-size: var(--fs-xxlarge);
+    font-weight: var(--fw-light);
+}
+
+#sub-title {
+    font-family: var(--ff-title);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+}
+
+#header-top-row-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#dpsi-logo {
+    background-image: url("../media/diverse_property_solutions_indiana_logo_h150.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-height: 150px;
+    width: 170px
+}
+
+#indiana-logo {
+    background-image: url("../media/indiana_h150.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 118px;
+    text-align: center;
+    padding: 1rem 1.75rem;
+    font-size: var(--fs-normal);
+}
+
+#header-bottom-row {
+    margin-top: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+nav li {
+    display: inline;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-top: 1px solid black;
+    border-bottom: 3px solid hsla(0,0%,0%,0);
+    transition-duration: 200ms;
+}
+
+nav li:hover {
+    border-top: 3px solid black;
+    border-bottom: 1px solid hsla(0,0%,0%,0);
+}
+
+nav a {
+    color: var(--clr-black);
+    text-decoration: none;
+}
+
+#contact-container {
+    font-family: var(--ff-title);
+    text-align: center;
+    width: 100%;
+    padding: .5rem 0;
+    border-top: 5px solid black;
+    border-bottom: 1px solid black;
+}
+
+#contact-container address {
+    display: flex;
+    justify-content: center;
+}
+
+#contact-container div {
+    font-style: normal;
+    margin: 0 1rem;
+    font-size: var(--fs-xlarge);
+}
+
+#contact-container a {
+    text-decoration: none;
+    color: var(--clr-black);
+}
+
+/* Home Page Settings */
+#page-title {
+    font-family: var(--ff-header);
+    padding: .5rem;
+}
+
+#background-image {
+    background-image: url("../media/original_house_image.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    height: 30rem;
+    border: 1px solid black;
+
+}
+
+#navigation-cards-container {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.navigation-card {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid black;
+    border-bottom: 3px solid hsla(0,0%,0%,0);
+    padding: 5px 10px;
+    transition-duration: 200ms;
+}
+
+.navigation-card:hover {
+    border-top: 3px solid black;
+    border-bottom: 1px solid hsla(0,0%,0%,0);
+}
+
+.navigation-card h3 {
+    text-align: left;
+    font-weight: var(--fw-light);
+    font-size: var(--fs-large);
+    padding: 5px 0;
+}
+
+.navigation-card p {
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-large);
+    padding: 5px 15px;
+}
+
+.navigation-card div,
+.navigation-card a {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    flex-grow: 1;
+    border: 1px solid black;
+}
+
+#house {
+    background-image: url(../media/house_bw.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition-duration: 200ms;
+}
+
+#house:hover {
+    background-image: url(../media/house_color.jpg);
+    background-repeat: no-repeat;
+    border: none;
+}
+
+#about {
+    background-image: url(../media/daniel-schludi-about-unsplash_bw.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition-duration: 200ms;
+}
+
+#about:hover {
+    background-image: url(../media/daniel-schludi-about-unsplash_color.jpg);
+    background-repeat: no-repeat;
+    border: none;
+}
+
+/* Footer Settings */
+footer {
+    border-top: 1px solid black;
+    padding: 10px 0 10px 10px;
+    font-size: var(--fs-small);
+}
+
+#social-media-links a {
+    display: block;
+    background-image: url(../media/facebook-sm-logo-png-transparent.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+}
+
+#about-article p {
+    font-family: var(--ff-body);
+    font-size:large;
+    padding: 1rem 1rem;
+}
+
+#about-image {
+    margin: 2rem auto;
+    background-image: url(../media/hunter-james-indianapolis-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 15rem;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+#contact-grid {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    padding: 2rem 2rem;
+}
+
+#contact-address p {
+    padding-top: 1rem;
+    font-size: large;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 1rem;
+    margin-bottom: 2px;
+    font-size: large;
+}
+
+form input, form textarea {
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: var(--fs-normal);
+}
+
+form button {
+    padding: 10px;
+    width: 120px;
+    margin: 0 auto;
+    border-radius: 25px;
+    color: white;
+    background-color: var(--clr-gold);
+    font-size: var(--fs-large);
+}
+
+form button:hover {
+    background-color: hsl(46,70%,39%);  /*hsl(46,70%,49%)*/
+}
+
+form button:active {
+    color: var(--clr-black);
+}
+
+@media only screen and (max-width: 700px){
+    #header-top-row-right,
+    #sub-title {
+        display: none;
+    }
+
+    #title {
+        text-align: center;
+    }
+
+    #contact-container address {
+        flex-direction: column;
+    }
+
+    #contact-container div {
+        margin: 0 0.5rem;
+        font-size: var(--fs-large);
+    }
+
+    #background-image {
+        height: 18rem;
+    
+    }
+
+    #navigation-cards-container {
+        grid-template: 1fr 1fr 1fr / 1fr;
+    }
+
+    #contact-grid {
+        grid-template: 1fr 1fr / 1fr;
+    }
+}
